@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="card"></div>
-    
-    <script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie card</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
+    <div id="card"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("card");
+
+      const CardMovie = ({ content, year, img }) => {
+        return (
+          <div className="cardMovie">
+            <img className="poster"
+              src={img}
+              alt={"img " + content}
+            />
+            <p className="p-content">{content}</p>
+            <p className="p-year">Year: {year}</p>
+          </div>
+        );
+      };
+
+      const Movies = (
+        <div>
+          <CardMovie
+            content={
+              "MobLand is a gritty London crime drama on Paramount+ created by Ronan Bennett and directed by Guy Ritchie, focusing on a brutal turf war between the Harrigan and Stevenson crime families."
+            }
+            year={2025}
+            img={"https://i.ebayimg.com/images/g/AcMAAOSw8P1oPJo3/s-l1200.jpg"}
+          />
+          <CardMovie
+            content={
+              "Guardians of the Galaxy is a Marvel sci-fi action-comedy about a group of intergalactic misfits—Peter Quill, Gamora, Drax, Rocket Raccoon, and Groot—who unite to stop a fanatical villain named Ronan."
+            }
+            year={2014}
+            img={
+              "https://inoriginal.net/uploads/posts/2023-03/1678528018_poster.webp"
+            }
+          />
+          <CardMovie
+            content={
+              "Stranger Things is a Netflix science fiction-horror series set in 1980s Indiana, centered on the disappearance of young Will Byers and the discovery of a parallel dimension called the Upside Down."
+            }
+            year={2024}
+            img={
+              "https://www.tallengestore.com/cdn/shop/products/stranger_things_11_46197a7d-df0a-4ea6-b73b-3a527bd7b100.jpg?v=1514020508"
+            }
+          />
+        </div>
+      );
+
+      ReactDOM.createRoot(container).render(Movies);
     </script>
-</body>
+  </body>
 </html>
