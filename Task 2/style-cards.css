@@ -8,6 +8,7 @@
 
 .cardsTitle {
     font-size: 30px;
+    margin-top: 100px;
 }
 
 .cards {
@@ -21,7 +22,13 @@
     flex-direction: column;
     border-radius: 10px;
     align-items: center;
+    transition: transform 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
 .cardImg {
     width: 200px;
@@ -30,4 +37,7 @@
 
 .movieName {
     margin: 10px;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-bottom: 50px;
 }
