@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="style-header.css" />
     <link rel="stylesheet" href="style-promo.css" />
+    <link rel="stylesheet" href="style-cards.css" />
   </head>
   <body>
     <div id="app"></div>
@@ -62,10 +63,63 @@
         render() {
           return (
             <div className="promoContainer">
-              <div class="promoContent">
+              <div className="promoContent">
                 <h1 className="title">{this.props.title}</h1>
                 <p className="promoText">{this.props.text}</p>
                 <button className="promoBtn">{this.props.btn}</button>
+              </div>
+            </div>
+          );
+        }
+      }
+
+      class Cards extends React.Component {
+        render() {
+          return (
+            <div className="CardsContainer">
+                <h2 className="cardsTitle">Action Thriller Movies</h2>
+              <div className="cards">
+                <div className="card">
+                  <img
+                    className="cardImg"
+                    src={this.props.img1}
+                    alt="movies img"
+                  />
+                  <span className="movieName">{this.props.name1}</span>
+                </div>
+                <div className="card">
+                  <img
+                    className="cardImg"
+                    src={this.props.img2}
+                    alt="movies img"
+                  />
+                  <span className="movieName">{this.props.name2}</span>
+                </div>
+                <div className="card">
+                  <img
+                    className="cardImg"
+                    src={this.props.img3}
+                    alt="movies img"
+                  />
+                  <span className="movieName">{this.props.name3}</span>
+                </div>
+                <div className="card">
+                  <img
+                    className="cardImg"
+                    src={this.props.img4}
+                    alt="movies img"
+                  />
+                  <span className="movieName">{this.props.name4}</span>
+                </div>
+                <div className="card">
+                  <img
+                    className="cardImg"
+                    src={this.props.img5}
+                    alt="movies img"
+                  />
+                  <span className="movieName">{this.props.name5}</span>
+                </div>
+                
               </div>
             </div>
           );
@@ -92,6 +146,28 @@
               "Movies—scary, funny, dramatic, romantic—make us experience a whole range of emotions. Lots of movies—lots of experiences!"
             }
             btn={"Finish Sign-Up"}
+          />
+          <Cards
+            img1={
+              "https://occ-0-769-768.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdHzyCLkikE5Qz3hlGG9j51Nmm8WIC3dUAHHFvq7ljdSAvaqnOpP1maFA92Uw8NQ3nHngeYEEO13aUg8orCg-MRk0QiAtYxVZblicSlGm0NZNdH5J9owlY-dOaPXp6K3kysVGzQrkNQ.jpg?r=53c"
+            }
+            name1={"Havok"}
+            img2={
+              "https://occ-0-769-768.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABagvFYqX2fskP8ux4iCzVoAPW-W2KSpX5PJ7V7suk9Ub9WM6jlY5VNeX4jAAoDDh8S5IeqBHskWXf8jm3xGxcTyhXSsEEz5l5X3KFGnp_w.jpg?r=317"
+            }
+            name2={"Gemini man"}
+            img3={
+              "https://occ-0-769-768.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUPGhALeoH-khdxTGjh3Sfzx29otO86ZRkh6Icld6Q7LyxHBAazvZmklMt6ajeUu1Xw_ljxC_DJY5G2c8rub60yumU52w0JlMoMsZjk6qw.jpg?r=8b3"
+            }
+            name3={"Shooter"}
+            img4={
+              "https://occ-0-769-768.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABY8CcdLTg7fvgyKIvVwS9ngAmHsIVLTpBuy9d3NrW1u8fxnbid9Ezn3PZBubPsqdFUUEaEgnR7XTU_nS8x-TMlOkK4kRhV38NHbnzmh4UQ.jpg?r=26f"
+            }
+            name4={"13 Hours: The secret"}
+            img5={
+              "https://occ-0-769-768.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABfgK7xneVvFZTonA51V-Esa4SN2r-TTzsX9Z2OEqWo9SLCRd9qsydszPg5k0osQpAKO8J0N5fjUioT8uTOe4QieqghdFnJZT52ASYZyFqQ.jpg?r=945"
+            }
+            name5={"Inglourious Basters"}
           />
         </div>
       );

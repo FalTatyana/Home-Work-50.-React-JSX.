@@ -1,0 +1,33 @@
+.CardsContainer {
+    max-width: 90%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cardsTitle {
+    font-size: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.cardImg {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.movieName {
+    margin: 10px;
+}
