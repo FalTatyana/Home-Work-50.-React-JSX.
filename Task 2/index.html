@@ -7,7 +7,8 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-header.css" />
+    <link rel="stylesheet" href="style-promo.css" />
   </head>
   <body>
     <div id="app"></div>
@@ -19,47 +20,83 @@
         render() {
           return (
             <div className="headerContainer">
-            <div className="headerWrapper">
+              <div className="headerWrapper">
                 <div className="logoWrapper">
-                <img className="logo" src={this.props.logo} alt={"logo "}/>
+                  <img className="logo" src={this.props.logo} alt={"logo "} />
                 </div>
-            
-                <div className="nav">
-                <a className="navLink" href={"#"}>{this.props.link1}</a>
-                <a className="navLink" href={"#"}>{this.props.link2}</a>
-                <a className="navLink" href={"#"}>{this.props.link3}</a>
-                <a className="navLink" href={"#"}>{this.props.link4}</a>
-                </div>
-            </div>
 
-            <div className="headerWrapper">
+                <div className="nav">
+                  <a className="navLink" href={"#"}>
+                    {this.props.link1}
+                  </a>
+                  <a className="navLink" href={"#"}>
+                    {this.props.link2}
+                  </a>
+                  <a className="navLink" href={"#"}>
+                    {this.props.link3}
+                  </a>
+                  <a className="navLink" href={"#"}>
+                    {this.props.link4}
+                  </a>
+                </div>
+              </div>
+
+              <div className="headerWrapper">
                 <div className="search">
-                    <img className="searchIcon" src={this.props.search} alt={"logo "}/>
+                  <img
+                    className="searchIcon"
+                    src={this.props.search}
+                    alt={"logo "}
+                  />
                 </div>
                 <div className="headerBtn">
-                    <button className="btn">Sign out</button>
+                  <button className="btn">Sign out</button>
                 </div>
+              </div>
             </div>
+          );
+        }
+      }
 
-          </div>
-          )
-        };
-      };
+      class Promo extends React.Component {
+        render() {
+          return (
+            <div className="promoContainer">
+              <div class="promoContent">
+                <h1 className="title">{this.props.title}</h1>
+                <p className="promoText">{this.props.text}</p>
+                <button className="promoBtn">{this.props.btn}</button>
+              </div>
+            </div>
+          );
+        }
+      }
 
-      const HeaderContent = (
+      const App = (
         <div>
-            <Header 
-                logo={"https://wallpapers.com/images/featured/netflix-logo-png-fqwt81hprrz7xsfg.jpg"}
-                link1={"Home"}
-                link2={"Series"}
-                link3={"Films"}
-                link4={"My list"}
-                search={"https://www.shutterstock.com/shutterstock/videos/3747062809/thumb/1.jpg?ip=x480"}
-            />
+          <Header
+            logo={
+              "https://wallpapers.com/images/featured/netflix-logo-png-fqwt81hprrz7xsfg.jpg"
+            }
+            link1={"Home"}
+            link2={"Series"}
+            link3={"Films"}
+            link4={"My list"}
+            search={
+              "https://www.shutterstock.com/shutterstock/videos/3747062809/thumb/1.jpg?ip=x480"
+            }
+          />
+          <Promo
+            title={"Movies"}
+            text={
+              "Movies—scary, funny, dramatic, romantic—make us experience a whole range of emotions. Lots of movies—lots of experiences!"
+            }
+            btn={"Finish Sign-Up"}
+          />
         </div>
       );
 
-      ReactDOM.createRoot(container).render(HeaderContent);
+      ReactDOM.createRoot(container).render(App);
     </script>
   </body>
 </html>
