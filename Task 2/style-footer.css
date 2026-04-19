@@ -1,7 +1,7 @@
 .footerContainer {
     max-width: 90%;
     margin: 0 auto 100px;
-    height: 200px;
+    height: 170px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -11,4 +11,8 @@
     color: rgb(140, 140, 140);
     margin-bottom: 20px;
     font-size: 14px;
+}
+
+.footerLink:hover {
+    color: rgb(173, 173, 173);
 }
